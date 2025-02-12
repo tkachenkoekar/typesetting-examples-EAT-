@@ -14,4 +14,4 @@ I usually typeset in ```LaTeX```, ```Overleaf``` and ```typst```. However, I hav
 3. ```typst```
     - A paper containing linguistic problems on child speech
     - A hand-out on analysing the article and comparing its results with real linguistic problems
-    - Personal overview on cafés in my hometown
+    - Personal overview on cafés in my hometown (will be soon)
