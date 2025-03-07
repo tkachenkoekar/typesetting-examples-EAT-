@@ -1,4 +1,4 @@
-# Overleaf projects
+# typst projects
 In this folder you can see:
 - 'Child speech LONG' and 'Child speech SHORT' contain typesetting linguistic problems.
   - **NB**: I did not upload photos that are relevant to these files
