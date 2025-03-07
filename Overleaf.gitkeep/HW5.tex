@@ -1,0 +1,79 @@
+\documentclass[14pt,extrafontsizes]{article}
+\usepackage[a4paper,left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[russian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[linguistics]{forest}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+\title{Передвижения. ДЗ5}
+\author{Екатерина Ткаченко 232}
+
+\begin{document}
+\maketitle
+\section*{Задание 1.}
+\begin{enumerate}
+    \item \textsc{Из этих заданий [я сделал каждое].}\\
+        Присутствие падежной связности
+    \item \textsc{This is not what I’ve been looking for.}\\
+        Присутствие падежной связности
+    \item \textsc{Кому я просила, [чтобы ты помог]}\\
+    Присутствие падежной связности
+    \item \textsc{Пекари из нас вышли впечатляющие.}\\
+    Присутствие оставшихся в начальной позиции зависимых
+    \item \textsc{Я выразил выступавшим на конференции лингвистам по благодарности каждому.}\\
+    \item \textsc{Лингвист из меня получится непутевый.}\\
+        Присутствие оставшихся в начальной позиции зависимых
+    \item \textsc{С кем он вам сказал, [что я виделся]?}\\ 
+    Присутствие пажежной связности
+    \item \textsc{Детей я проверил каждого.}\\
+        Присутствие падежной связности
+    \item \textsc{What I’ve been looking for was this.}\\
+\end{enumerate}
+\section*{Задание 2.}
+\begin{enumerate}
+\item Would you be kind enough to explain to me how head movement works?\\
+\begin{forest}
+    [CP [C$'$
+        [C {[+Q]} [C {[+Q]}] [T [Would, name=T1]]]
+        [TP [DP[You]] [T$'$ [t(i), name=T2] [VP [{be kind enough \\ to explain to me \\ how head movement works?},roof ]]]]
+    ]]
+    \draw[->] (T2)
+    to[out=south west, in=south west](T1)
+\end{forest}\\
+\textbf{ОТВЕТ: Вершинное передвижение}
+\item What do you see in this picture?\\
+\begin{forest}
+    [CP [DP [What, name=T1, roof ]] [C$'$ [C [do]] [TP [DP [You,roof ]][T$'$ [T [\emptyset]] [VP [V$'$[V$'$ [V [see]] [t(i), name=T2]][PrepP [{in this picture?},roof ]]]]]]]]
+    \draw[->] (T2)
+    to[out=south west, in=south west](T1)
+\end{forest}\\
+\textbf{ОТВЕТ: Фразовое передвижение}
+\item Does John love nanosyntax?\\
+\textbf{ОТВЕТ: Вершинное передвижение}
+\item The students can skip some lectures.\\
+\begin{forest}
+    [TP [DP [{The students},name=T1,roof]][T$'$[T[can]][VP[t(i), name=T2][V$'$[V[skip]][DP[{some lectures},roof ]]]]]]
+    \draw[->] (T2)
+    to[out=south west, in=south west](T1)
+\end{forest}\\
+\textbf{ОТВЕТ: Вершинное передвижение}
+\item Яблоко, растущее на каком из этих двух деревьев, мне надо съесть?\\
+\textbf{ОТВЕТ: Фразовое передвижение}
+\item The students were read a lecture on generative syntax.\\
+\textbf{ОТВЕТ: Вершинное передвижение}
+\item Hoffman schreibt oft Musik.\\
+\begin{forest}
+    [TP [DP [Hoffman,roof ]] [T$'$ [T+V [schreibt, name=T1]][VP [t(i)][V$'$ [AdvP[oft]][V$'$[t(j), name=T2][DP[Musik,roof ]]]]]]]
+    \draw[->] (T2)
+    to[out=south west, in=south west](T1)
+\end{forest}\\
+\textbf{ОТВЕТ: Вершинное передвижение}
+\item Кривую козу привел Иларион(, а хромую – Амфитрион.)\\
+\textbf{ОТВЕТ: Фразовое передвижение}
+\end{enumerate}
+\end{document}

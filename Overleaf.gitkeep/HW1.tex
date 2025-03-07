@@ -1,0 +1,309 @@
+\documentclass[14pt,extrafontsizes]{article}
+\usepackage[a4paper,left=1cm,right=1cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[english, russian]{babel}
+\usepackage{tikz-dependency}
+\usepackage{forest}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\title{Грамматика зависимостей. ДЗ1}
+\author{Екатерина Ткаченко 232}
+\forestset{
+dg edges/.style={for tree={parent anchor=south, child anchor=north,align=center,base=bottom,where n children=0{tier=word,edge=dotted,calign with current edge}{}}},
+}
+\begin{document}
+\maketitle
+
+\section*{Задание 1.}
+\subsection*{1.1}
+\subsubsection*{1)}
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Если \& такие \& живут \& на \& Четвертой \& Рождественской \& люди \& . \\
+\textsc{союз} \& \textsc{мест.-прил.} \& \textsc{глагол} \& \textsc{предлог} \& \textsc{числ.} \& \textsc{прил.} \& \textsc{сущ.} \& \textsc{точка} \\
+\end{deptext}
+\deproot{3}{СКАЗУЕМОЕ}
+\depedge{7}{2}{ОПРЕДЕЛЕНИЕ}
+\depedge{3}{4}{ОБСТОЯТЕЛЬСТВО}
+\depedge{4}{6}{ОПРЕДЕЛНИЕ}
+\depedge{3}{7}{ПОДЛЕЖАЩЕЕ}
+\depedge{6}{5}{ОПРЕДЕЛЕНИЕ}
+\depedge{3}{1}{}
+\depedge{3}{8}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{red}{\textbf{не проективно}}.
+\\
+\subsubsection*{2)}
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Пусть \& бурная \& не \& разрешится \& ночь \& дождливым \& утром \& .\\
+\textsc{част.} \& \textsc{прил.} \& \textsc{част.} \& \textsc{глагол} \& \textsc{сущ.} \& \textsc{прил.} \& \textsc{сущ.} \& \textsc{точка} \&\\
+\end{deptext}
+\deproot{4}{СКАЗУЕМОЕ}
+\depedge{4}{5}{ПОДЛЕЖАЩЕЕ}
+\depedge{4}{3}{СКАЗУЕМОЕ}
+\depedge[label style = {below}]{5}{2}{ОПРЕДЕЛЕНИЕ}
+\depedge{4}{7}{ОБСТОЯТЕЛЬСТВО}
+\depedge{7}{6}{ОПРЕДЕЛЕНИЕ}
+\depedge{4}{1}{}
+\depedge{4}{8}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{red}{\textbf{не проективно}}.
+\\
+\subsubsection*{3)}
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Облако \& большое \& закрыло \& солнце \& . \\
+\textsc{сущ.} \& \textsc{прил.} \& \textsc{глагол} \& \textsc{сущ.} \& \textsc{точка} \&\\
+\end{deptext}
+\deproot{3}{СКАЗУЕМОЕ}
+\depedge{3}{4}{ДОПОЛНЕНИЕ}
+\depedge{3}{1}{ПОДЛЕЖАЩЕЕ}
+\depedge{1}{2}{ОПРЕДЕЛЕНИЕ}
+\depedge{3}{5}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{ForestGreen}{\textbf{проективно}}.
+\\
+ИЛИ
+\\
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Облако \& большое \& закрыло \& солнце \& . \\
+\textsc{сущ.} \& \textsc{прил.} \& \textsc{глагол} \& \textsc{сущ.} \& \textsc{точка} \&\\
+\end{deptext}
+\deproot{3}{СКАЗУЕМОЕ}
+\depedge[label style = {below}]{3}{4}{ДОПОЛНЕНИЕ}
+\depedge{3}{1}{ПОДЛЕЖАЩЕЕ}
+\depedge{4}{2}{ОПРЕДЕЛЕНИЕ}
+\depedge{3}{5}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{red}{\textbf{не проективно}}.
+\\
+ИЛИ
+\\
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Облако \& большое \& закрыло \& солнце \& . \\
+\textsc{сущ.} \& \textsc{прил.} \& \textsc{глагол} \& \textsc{сущ.} \& \textsc{точка} \&\\
+\end{deptext}
+\deproot{3}{СКАЗУЕМОЕ}
+\depedge{3}{4}{ПОДЛЕЖАЩЕЕ}
+\depedge{3}{1}{ДОПОЛНЕНИЕ}
+\depedge{1}{2}{ОПРЕДЕЛЕНИЕ}
+\depedge{3}{5}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{ForestGreen}{\textbf{проективно}}.
+\\
+ИЛИ
+\\
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Облако \& большое \& закрыло \& солнце \& . \\
+\textsc{сущ.} \& \textsc{прил.} \& \textsc{глагол} \& \textsc{сущ.} \& \textsc{точка} \&\\
+\end{deptext}
+\deproot{3}{СКАЗУЕМОЕ}
+\depedge[label style = {below}]{3}{4}{ПОДЛЕЖАЩЕЕ}
+\depedge{3}{1}{ДОПОЛНЕНИЕ}
+\depedge{4}{2}{ОПРЕДЕЛЕНИЕ}
+\depedge{3}{5}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{red}{\textbf{не проективно}}.
+\\
+\subsubsection*{4)}
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Луч \& солнца \& золотого \& тьмы \& скрыла \& пелена \& . \\
+\textsc{сущ.} \& \textsc{сущ.} \& \textsc{прил.} \& \textsc{сущ} \& \textsc{глагол} \& \textsc{сущ.} \& \textsc{точка} \&\\
+\end{deptext}
+\deproot{5}{СКАЗУЕМОЕ}
+\depedge{5}{6}{ПОДЛЕЖАЩЕЕ}
+\depedge{6}{4}{ОПРЕДЕЛЕНИЕ}
+\depedge{5}{1}{ДОПОЛНЕНИЕ}
+\depedge{1}{2}{ОПРЕДЕЛЕНИЕ}
+\depedge{2}{3}{ОПРЕДЕЛЕНИЕ}
+\depedge{5}{7}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{red}{\textbf{не проективно}}.
+\\
+\subsubsection*{5)}
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+И \& про \& прерии \& простор \& поведут \& свой \& разговор \& . \\
+\textsc{союз} \& \textsc{предл.} \& \textsc{сущ.} \& \textsc{сущ.} \& \textsc{глагол} \& \textsc{мест.-прил.} \& \textsc{сущ.} \& \textsc{} \&\\
+\end{deptext}
+\deproot{5}{СКАЗУЕМОЕ}
+\depedge{5}{7}{ДОПОЛНЕНИЕ}
+\depedge{7}{6}{ОПРЕДЕЛЕНИЕ}
+\depedge{7}{2}{ОПРЕДЕЛЕНИЕ}
+\depedge{2}{4}{ОПРЕДЕЛЕНИЕ}
+\depedge{4}{3}{ОПРЕДЕЛЕНИЕ}
+\depedge{5}{1}{}
+\depedge{5}{8}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{red}{\textbf{не проективно}}.
+\\
+\subsubsection*{6)}
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Жених \& встретил \& невесту \& в \& костюме \& . \\
+\textsc{сущ.} \& \textsc{глагол} \& \textsc{сущ.} \& \textsc{предл.} \& \textsc{сущ.} \& \textsc{точка} \&\\
+\end{deptext}
+\deproot{2}{СКАЗУЕМОЕ}
+\depedge{2}{1}{ПОДЛЕЖАЩЕЕ}
+\depedge{2}{3}{ДОПОЛНЕНИЕ}
+\depedge{3}{4}{ДОПОЛНЕНИЕ}
+\depedge{4}{5}{ДОПОЛНЕНИЕ}
+\depedge{2}{6}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{ForestGreen}{\textbf{проективно}}.
+\\
+ИЛИ
+\\
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Жених \& встретил \& невесту \& в \& костюме \& . \\
+\textsc{сущ.} \& \textsc{глагол} \& \textsc{сущ.} \& \textsc{предл.} \& \textsc{сущ.} \& \textsc{точка} \&\\
+\end{deptext}
+\deproot{2}{СКАЗУЕМОЕ}
+\depedge{2}{1}{ПОДЛЕЖАЩЕЕ}
+\depedge{2}{3}{ДОПОЛНЕНИЕ}
+\depedge{1}{4}{ОПРЕД./ ОБСТОЯТ.}
+\depedge{4}{5}{ОПРЕД./ ОБСТОЯТ.}
+\depedge{2}{6}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{red}{\textbf{не проективно}}.
+\\
+\subsubsection*{7)}
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Очень \& Вы \& верно \& это \& заметили \& ! \\
+\textsc{наречие} \& \textsc{мест.-сущ.} \& \textsc{наречие} \& \textsc{мест.-сущ.} \& \textsc{глагол} \& \textsc{воскл.зн.} \&\\
+\end{deptext}
+\deproot{5}{СКАЗУЕМОЕ}
+\depedge{5}{2}{ПОДЛЕЖАЩЕЕ}
+\depedge{5}{3}{ОБСТОЯТЕЛЬСТВО}
+\depedge{3}{1}{ОБСТОЯТЕЛЬСТВО}
+\depedge{5}{4}{ДОПОЛНЕНИЕ}
+\depedge{5}{6}{PUNCT}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{red}{\textbf{не проективно}}.
+\\
+\subsubsection*{8)}
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Пустынной \& улицей \& вдвоём \& с \& тобой \& куда-то \& мы \& идём \& .\\
+\textsc{прил.} \& \textsc{сущ.} \& \textsc{наречие} \& \textsc{предл.} \& \textsc{мест.-ущ.} \& \textsc{мест.-нар.} \& \textsc{мест-сущ.} \& \textsc{глагол} \& \textsc{точка} \&\\
+\end{deptext}
+\deproot{8}{СКАЗУЕМОЕ}
+\depedge{8}{7}{ПОДЛЕЖАЩЕЕ}
+\depedge{2}{1}{ОПРЕДЕЛЕНИЕ}
+\depedge{8}{3}{ОБСТОЯТЕЛЬСТВО}
+\depedge{8}{6}{ОБСТОЯТЕЛЬСТВО}
+\depedge{7}{4}{ПОДЛЕЖАЩЕЕ}
+\depedge{4}{5}{ПОДЛЕЖАЩЕЕ}
+\depedge{8}{2}{ОБСТОЯТЕЛЬСТВО}
+\depedge{8}{9}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{red}{\textbf{не проективно}}.
+\\
+ИЛИ
+\\
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Пустынной \& улицей \& вдвоём \& с \& тобой \& куда-то \& мы \& идём \& .\\
+\textsc{прил.} \& \textsc{сущ.} \& \textsc{наречие} \& \textsc{предл.} \& \textsc{мест.-ущ.} \& \textsc{мест.-нар.} \& \textsc{мест-сущ.} \& \textsc{глагол} \& \textsc{точка} \&\\
+\end{deptext}
+\deproot{8}{СКАЗУЕМОЕ}
+\depedge{8}{7}{ПОДЛЕЖАЩЕЕ}
+\depedge{2}{1}{ОПРЕДЕЛЕНИЕ}
+\depedge{8}{3}{ОБСТОЯТЕЛЬСТВО}
+\depedge{8}{6}{ОБСТОЯТЕЛЬСТВО}
+\depedge{8}{4}{ОБСТОЯТЕЛЬСТОВ}
+\depedge{4}{5}{ОБСТОЯТЕЛЬСТВО}
+\depedge{8}{2}{ОБСТОЯТЕЛЬСТВО}
+\depedge{8}{9}{ПУНКТ.}
+\end{dependency}
+\\
+\textbf{Ответ: }Предложение \textcolor{ForestGreen}{\textbf{проективно}}.
+\subsection*{1.2 :)}
+\textit{Луч солнца золотого тьмы скрыла пелена} -- `Серенада Трубадура', "Бременские музыканты"\\
+\textit{Пустынной улицей вдвоём с тобой куда-то мы идём} -- `Восьмиклассница', Группа "Кино"
+
+\section*{Задание 2.}
+(1) Они сейчас там задохнутся все.
+\\
+\begin{dependency}[theme = simple]
+\begin{deptext}[column sep=1em]
+Они \& сейчас \& там \& задохнутся \& все \& .\\
+\end{deptext}
+\deproot{4}{СКАЗУЕМОЕ}
+\depedge{4}{1}{ПОДЛЕЖАЩЕЕ}
+\depedge{4}{2}{ОБСТОЯТЕЛЬСТВО}
+\depedge{4}{3}{ОБСТОЯТЕЛЬСТВО}
+\depedge{1}{5}{ОПРЕДЕЛЕНИЕ}
+\depedge{4}{6}{ПУНКТ.}
+\end{dependency}
+\\
+Наверное, это можно сказать в случае, когда нужно сделать акцент, в данном случае, на том, кто "все" (?).\\ \\
+(2) Вася изучает особенности индо-иранских языков, которые влияют на произношение  их носителей английского.\\
+\begin{dependency}[theme = simple]
+\begin{deptext}
+Вася \& изучает \& особенности \& индо-иранских \& языков, \& которые \& влияют \& на \& произношение \& их \& носителей \& английского. \&\\
+\textsc{сущ.} \& \textsc{глагол} \& \textsc{сущ.} \& \textsc{прил.} \& \textsc{сущ.} \&  \textsc{мс-с.} \& \textsc{глагол} \& \textsc{пред.} \& \textsc{сущ.} \& \textsc{мс-п} \& \textsc{сущ} \& \textsc{сущ} \&\\
+\end{deptext}
+\deproot{2}{СКАЗУЕМОЕ}
+\deproot{7}{СКАЗУЕМОЕ}
+\depedge{2}{1}{ПОДЛЕЖАЩЕЕ}
+\depedge{2}{3}{ДОПОЛНЕНИЕ}
+\depedge{3}{5}{ОПРЕДЕЛЕНИЕ}
+\depedge{5}{4}{ОПРЕДЕЛЕНИЕ}
+\depedge{3}{7}{<<придаточное предложение>>}
+\depedge{7}{6}{ПОДЛЕЖАЩЕЕ}
+\depedge{7}{8}{ДОПОЛНЕНИЕ}
+\depedge{8}{9}{ДОПОЛНЕНИЕ}
+\depedge{11}{5}{ОПРЕДЕЛЕНИЕ}
+\depedge{11}{10}{ОПРЕДЕЛЕНИЕ}
+\depedge{11}{12}{ДОПОЛНЕНИЕ}
+\depedge{9}{11}{ОПРЕДЕЛЕНИЕ}
+\depedge{9}{12}{ОПРЕДЕЛЕНИЕ}
+\end{dependency}
+\\
+Смысл предложения такой: Вася изучает, какие особенности L1 проявляются у носителей L1 в L2. В данном случае L1 = индо-иранские языки, L2 = английский.\\
+P.S. Без указания знаков препинания, они не вмещались в строчку :(.
+
+\section*{Задание 3*.}
+\begin{forest}
+dg edges
+[счастливы
+  [Птицы [Птицы]] [безумно [безумно]]
+     [счастливы,]  [когда [когда] [летают [бегемоты [бегемоты]][летают] [в [в] [космос [космос]]]]]]
+\end{forest}
+
+\begin{forest}
+    dg edges
+    [Была[Была] [у [у] [слона[слона]]] [мечта [мечта]], [чтобы [чтобы] [[начинались [пары[пары]] [начинались] [и [и] [кончались [кончались] [вовремя [вовремя]]]]] вовремя]]].]
+\end{forest}
+
+\begin{forest}
+    dg edges
+    [было [Вот[Вот] [бы[бы]]] [не[не]] [было] [зимы [зимы]]]
+\end{forest}
+
+\begin{forest}
+dg edges
+    [has [He[He]] [has] [bought[bought]]   [watermelon [a[a]] [blue[blue]] [watermelon]]]
+\end{forest}
+
+\end{document}

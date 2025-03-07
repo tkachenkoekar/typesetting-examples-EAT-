@@ -1,0 +1,157 @@
+\documentclass[14pt,extrafontsizes]{article}
+\usepackage[a4paper,left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[russian]{babel}
+\usepackage{tikz-dependency}
+\usepackage{forest}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage[dvipsnames]{xcolor}
+\title{Грамматика зависимостей. ДЗ2}
+\author{Екатерина Ткаченко 232}
+
+\begin{document}
+\maketitle
+\section*{Задание 1.}
+\begin{itemize}
+    \item \underline{Зелёные идеи} яростно спят \underline{в кровати}\\
+    \textbf{Жуки} яростно спят \textbf{ночью}
+    \item Кот \underline{на дерево} залез\\
+    Кот \textbf{вчера} залез
+    \item \underline{Клоунский} нос \underline{совершенно бесхозно} лежит в аудитории 518\\
+    \textbf{Крайне великолепно-красный} нос \textbf{по воли 
+    Хозяина} лежит в аудитории 518
+    \item \underline{The pink} penguins were required to \underline{complete the sentence}\\
+    \textbf{My completely responsible} penguins were required to \textbf{jump}
+\end{itemize}
+
+\section*{Задание 2.}
+\subsection*{2.1}
+\{<<Я>>, <<выращиваю>>, <<деревья>>, <<в>>, <<лесу>>; <<варащиваю деревья>>, <<в лесу>>; <<деревья в лесу>>, <<выращиваю в лесу>>; <<выращиваю деревья в лесу>>; <<Я выращиваю деревья в лесу>>\}
+\begin{itemize}
+    \item \textbf{Фрагментация}\\
+    \textit{Я выращиваю...} → Что выращиваешь?
+    \item \textbf{Опущение}\\
+    \textit{выращиваю деревья в лесу} → выращиваю деревья\\
+    \textit{деревья в лесу} → деревья
+    \item \textbf{Замещение} \\
+    \textit{выращиваю деревья в лесу} → сплю\\
+    \textit{выращиваю деревья} [в лесу] → брожу [в лесу]\\
+    \textit{деревья в лесу} → цветочки\\
+    \textit{в лесу} → дома
+    \item \textbf{Перемещение / отделимость}\\
+    ?В выращиваю деревья я саду.
+    \item \textbf{Эффект крысолова}\\
+    Выращиваю деревья \underline{в саду} я.\\ 
+    Я деревья выращиваю \underline{в саду}\\
+    Деревья я \underline{в саду} выращиваю
+    \item \textbf{Сочинение}\\
+    \underline{Я и ты} выращиваем деревья в саду\\
+    Я \underline{выращиваю и люблю} деревья в саду\\
+    Я выращиваю \underline{деревья и цветочки} в саду\\
+    Я выращиваю деревья \underline{в саду и в огороде}
+\end{itemize}
+\\
+\{<<Слониха>>, <<очень>>, <<томно>>, <<танцевала>>, <<вальс>>, <<с>>, <<жирафом>>; <<очень томно>>, <<томно танцевала>>, <<танцевала вальс>>, <<с жирафом>>; <<слониха с жирафом>>, <<очень томно танцевала>>; <<Слониха очень томно танцевала вальс с жирафом>>\}
+\begin{itemize}
+    \item \textbf{Фрагментация}\\
+    \textit{Слониха танцевала} → Что танцевала?\\
+    \item \textbf{Опущение}\\
+    \textit{очень томно танцевала} → танцевала\\
+    \textit{танцевала с жирафом} → танцевала\\
+    \textit{танцевала вальс} → танцевала\\
+    \textit{слониха с жирафом} → слониха
+    \item \textbf{Замещение}\\
+    \textit{танцевала вальс} → пела\\
+    \textit{очень томно} → задорно 
+    \item \textbf{Перемещение / отделимость}\\
+    см. ситуация \textit{с жирафом} аналогична \textit{в саду} из предыдущего предложения.
+    \item \textbf{Эффект крысолова}\\
+    см. ситуация \textit{с жирафом} аналогична \textit{в саду} из предыдущего предложения.
+    \item \textbf{Сочинение}\\
+    \underline{Слон и слониха} очень томно танцевали вальс с жирафом\\
+    Слониха очень \underline{томно и скучно} танцевала вальс с жирафом\\
+    Слониха очень томно \underline{пела и танцевала вальс} с жирафом\\
+    Слониха очень томно \underline{танцевала вальс и кадриль} с жирафом\\
+    Слониха очень томно танцевала вальс \underline{с жирафом и его братом}.
+\end{itemize}
+\\
+\subsection*{2.2}
+\subsubsection*{(1)}
+\begin{verbatim}
+[S [NP [N [Я]]] [VP [V [выращиваю]] [NP [N [деревья]]] [PP [P [в]] [NP [N [лесу]]]]]]
+\end{verbatim}
+\\
+\begin{verbatim}
+[S [NP [N [Я]]] [VP [V [выращиваю]] [NP [N [деревья]] [PP [P [в]] [NP [N [лесу]]]]]]]
+\end{verbatim}
+\\
+\subsubsection*{(2)}
+\begin{verbatim}
+[S [NP [N [Слониха]]] [VP [AdvP[Adv [очень]] [Adv [томно]]] [V [танцевала]] [NP [N [вальс]]]\end{verbatim}\linebreak \begin{verbatim}[PP [P [с]] [NP [N [жирафом]]]]]]\end{verbatim} 
+
+\\
+\begin{verbatim}
+[S [NP [N [Слониха]]] [VP [AdvP[Adv [очень]] [Adv [томно]]] [V [танцевала]] [NP [N [вальс]]\end{verbatim}\linebreak \begin{verbatim}[PP [P [с]] [NP [N [жирафом]]]]]]] 
+\end{verbatim}
+\\
+\subsubsection*{(3)}
+\begin{verbatim}
+[S [NP [N [Кряква]] [PP [P [с]] [NP [N [брюквой]]]] ] [VP [NP [N [брюкву]]] [V [жмакнула]]] ]
+\end{verbatim}
+\\
+\begin{verbatim}
+[S [NP [N [Кряква]]] [VP [NP [N [брюкву]][PP [P [с]] [NP [N [брюквой]]]] ] [V [жмакнула]]] ]
+\end{verbatim}
+\\
+P.S. Сначала были построены деревья, а потом скобочная нотация здесь. Деревья ниже по коду строятся с помощью скобочной нотации.
+
+\subsection*{2.3}
+\subsubsection*{(1)}
+\begin{forest}
+[S [NP [N [Я]]] [VP [V [выращиваю]] [NP [N [деревья]]] [PP [P [в]] [NP [N [лесу]]]]]]
+\end{forest}
+\\
+ИЛИ
+\\
+\begin{forest}
+[S [NP [N [Я]]] [VP [V [выращиваю]] [NP [N [деревья]] [PP [P [в]] [NP [N [лесу]]]]]]]
+\end{forest}
+\\
+\subsubsection*{(2)}
+\begin{forest}
+[S [NP [N [Слониха]]] [VP [AdvP[Adv [очень]] [Adv [томно]]] [V [танцевала]] [NP [N [вальс]]] [PP [P [с]] [NP [N [жирафом]]]]]] 
+\end{forest}
+\\
+ИЛИ
+\\
+\begin{forest}
+[S [NP [N [Слониха]]] [VP [AdvP[Adv [очень]] [Adv [томно]]] [V [танцевала]] [NP [N [вальс]] [PP [P [с]] [NP [N [жирафом]]]]]]] 
+\end{forest}
+\\
+\subsubsection*{(3)}
+\begin{forest}
+[S [NP [N [Кряква]] [PP [P [с]] [NP [N [брюквой]]]] ] [VP [NP [N [брюкву]]] [V [жмакнула]]] ]
+\end{forest}
+\\
+ИЛИ
+\\
+\begin{forest}
+[S [NP [N [Кряква]]] [VP [NP [N [брюкву]][PP [P [с]] [NP [N [брюквой]]]] ] [V [жмакнула]]] ]
+\end{forest}
+\\
+Сомневаюсь в предложной группе, потому что \textit{с} играет роль коммитатива. 
+\\
+\section*{Задание 3.}
+\subsection*{1)}
+\begin{forest}
+[S [NP [N [Миша]]] [VP [V [думал]] [CP [C [что]] [S [NP [N [Шима]]] [VP [V [спит]]]] ] ]]
+\end{forest}
+\subsection*{2)*}
+\begin{forest}
+    [S [NP [N [Соседи]] [CP [C[что]] [S [NP [N [мама]]][VP [V [видела]]]]]] [VP [V [мешают]] [NP [N [папе]]]]]
+\end{forest}
+\\
+P.S. Считаю, что сказать так можно, потому что <<\textit{Хочешь, я взорву все звёзды, что мешают спать?}>>
+
+\end{document}

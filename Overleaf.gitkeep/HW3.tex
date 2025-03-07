@@ -1,0 +1,160 @@
+\documentclass[14pt,extrafontsizes]{article}
+\usepackage[a4paper,left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[russian]{babel}
+\usepackage{tikz-dependency}
+\usepackage{forest}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
+\title{Головы. Х-штрих. ДЗ3}
+\author{Екатерина Ткаченко 232}
+
+\begin{document}
+\maketitle
+
+\section*{Задание 1. Критерии вершинности}
+\subsection*{1.1}
+\colorbox{red}{Красный цвет} -- не соответствие критерию, \colorbox{green}{зелёный} -- соответствие, \colorbox{yellow}{жёлтый} -- <<зависит от контекста>>\\
+    \begin{tabular}{|l|l|l|}
+        \hline
+         & \textbf{eats} & \textbf{vegetables}\\
+         \hline
+         Внутренний синтаксис& \cellcolor{red} & \cellcolor{red}\\
+         Внешний синтаксис& \cellcolor{green} & \cellcolor{red} \\
+         Морфосинтаксический локус& \cellcolor{green} & \cellcolor{red}\\
+         Дистрибутивный эквивалент& \cellcolor{green} & \cellcolor{red}\\
+         Обязательность& \cellcolor{green} & \cellcolor{red}\\
+         \hline
+    \end{tabular}
+\\
+1) Ни одна из составляющих не определяет другую составляющую\\
+2) <<eats>> в тех же контекстах, что и <<eats vegetables>>\\
+3) <<starts to eat vegetables>> -- вершина меняется\\
+4) Можно сказать <<eats>> вместо <<eats vegetables>>, но не <<vegetables>> вместо <<eats vegetables>> \\
+5) <<He eats>>, но не <<*He vegetables>> \\
+\textsc{\textbf{итог}}: <<eats>> -- вершина\\
+    \begin{tabular}{|l|c|c|}
+        \hline
+         & \textbf{три} & \textbf{кота}\\
+         \hline
+         Внутренний синтаксис& \cellcolor{green} & \cellcolor{red}\\
+         Внешний синтаксис& \cellcolor{green} & \cellcolor{red}\\
+         Морфосинтаксический локус& \cellcolor{green} & \cellcolor{yellow}\\
+         Дистрибутивный эквивалент& \cellcolor{yellow} & \cellcolor{red} \\
+         Обязательность& \cellcolor{green} & \cellcolor{red}\\
+         \hline
+    \end{tabular}
+\\
+1)<<три>> определяет падеж слова <<кот>>, но не наоборот\\
+2) \\
+3) Слово <<три>> изменяется по падежу, а составляющая <<кота>> то остаётся в своей форме, но, когда <<три>> стоит не в И.п., <<кот>> согласуется с падежом составляющей <<три>>: \textit{трёх котов}, \textit{трём котам}, \textit{тремя котами}, \textit{трёх котах}\\
+4)Можно представить диалог: <<Сколько котов? -- Три>>. <<Три>>, скорее всего, не может заменять всю группу\\
+5)Можно опустить <<три>>, но <<*кота>>\\
+\textsc{\textbf{итог}}: <<три>> -- вершина\\
+    \begin{tabular}{|l|c|c|}
+        \hline
+         & \textbf{на} & \textbf{крыше}\\
+         \hline
+         Внутренний синтаксис& \cellcolor{yellow} & \cellcolor{red}\\
+         Внешний синтаксис& \cellcolor{yellow} & \cellcolor{red}\\
+         Морфосинтаксический локус& \cellcolor{red} & \cellcolor{red}\\
+         Дистрибутивный эквивалент& \cellcolor{yellow} & \cellcolor{red}\\
+         Обязательность& \cellcolor{yellow} & \cellcolor{red}\\
+         \hline
+    \end{tabular}\\
+1) Не совсем, потому что <<на>> может управлять и другим падежом см. <<на крышу>>\\
+2)\\
+3) Можно сказать <<на крышах>>, но скорее всего изменение по числам здесь не учитывается, в таком случае ни одно из слов не соответствует критерию вершины\\
+4) Наверное, можно сказать, что <<на>> может заменять целую группу, но только в определённых контекстах: <<На или под крышей?>> -- <<На>>.\\
+5)<<на>> имеет большую обязательность, чем <<крыше>>, но опять же, только в некоторых контекстах\\
+\textsc{\textbf{итог}}: <<на>> -- скорее вершина, чем нет
+\subsection*{1.2}
+\begin{tabular}{||l||ll|ll||}
+    \hline
+     & \textbf{эту} & \textbf{ламу} & \textbf{this} & \textbf{peccary}\\
+         \hline
+         Внутренний синтаксис& \cellcolor{red} & \cellcolor{green} & \cellcolor{red} & \cellcolor{green}\\
+         Внешний синтаксис& \cellcolor{yellow} & \cellcolor{green} & \cellcolor{green} & \cellcolor{red}\\
+         Морфосинтаксический локус& \cellcolor{red} & \cellcolor{red} & \cellcolor{green} & \cellcolor{red}\\
+         Дистрибутивный эквивалент& \cellcolor{yellow} & \cellcolor{green} & \cellcolor{green} & \cellcolor{red}\\
+         Обязательность& \cellcolor{red} & \cellcolor{green} & \cellcolor{green} & \cellcolor{red}\\
+    \hline
+\end{tabular}\\
+1.1)<<ламу>> диктует падеж и род для <<эту>>\\
+1.2)Можно сказать <<Вижу ламу>> и <<Вижу эту ламу>>, но вляд ли можно сказать <<Вижу эту ламу>> и *<<Вижу эту>>\\
+1.3) Из-за того, что здесь согласование, тут нельзя выделить однозначно вершины, потому что формы будут одного и того же падежа\\
+1.4) Скорее нельзя сказать <<эту>> вместо <<эту ламу>>, но можно сказать <<ламу>> вместо <<эту ламу>>\\
+1.5) <<ламу>> -- обязательная часть словосочетания, чем <<эту>>\\
+2.1) скорее <<peccary>> диктует число для <<this>>\\
+2.2) Можно сказать <<I see this peccary>> и <<I see this>> в одном и том же контексте, но нельзя сказать <<I see this peccary>> и *<<I see peccary>>, не говоря про мясо peccary\\
+2.3) Ср. немецкий язык, где форма сущ. не меняется по падежам, а указательные местоимения да\\
+2.4) Можно сказать <<I see this>> сместо <<I see this peccaryy>>, но не *<<I see peccary>> в том же значении и без указательного местоимения и/или артикля\\
+2.5) <<peraccy>> не может употребляться без определителя, а <<this>> может без определяемого.\\
+\textsc{\textbf{итог}}: В русском языке определяемое слово -- вершина. В английском языке опреляющее слово (детерминанты) -- вершина.
+
+\section*{Задание 2. Аргументы и адъюнкты}
+\begin{forest}
+    [TP [NP [N$'$ [N[Петя]]]] [T$'$[T [$\emptyset$, name=T1]][VP[V$'$ [V$'$ [V[\textbf{ест}, name=T2]] [NP [N$'$[N[\textit{\textbf{суп}}]]]]][NP[N$'$[N[\textit{вилкой}]]]]]]]]
+    \draw[->] (T2)
+    to[out=south west, in=south west](T1)
+\end{forest}
+\\
+\textbf{ест} -- аргумент адъюнкта \textit{суп}\\
+\textbf{ест суп} -- аргумент адъюнкта \textit{вилкой}\\
+? Петя -- спецификатор\\
+\begin{forest}
+    [TP
+        [NP [N$'$ [Pro [Мы]]]]
+        [T$'$ [T[$\emptyset$, name=T2]][VP[V$'$ [V[\textbf{приуныли}, name=T1]][PP [P$'$[P[\textbf{\textit{из-за}}]][NP[N$'$[AdjP[Adj$'$[Adj[\textit{\underline{плохой}}]]]][N[\textbf{\textit{\underline{погоды}}}]]]]]]]]]
+    ]
+    \draw[->] (T1)
+    to[out=south west, in=south west](T2)
+\end{forest}\\
+\textbf{приуныли} -- аргумент адъюнкта \textit{из-за плохой погоды}\\
+\textbf{из-за} -- аргумент адъюнкта \textit{плохой погоды}\\
+\textbf{погоды} -- аргумент адъюнкта \textit{плохой}\\
+? Мы -- спецификатор
+
+\section*{Задание 3. X-bar}
+\begin{forest}
+    [TP
+        [DP [D$'$ [D[Эта]][NP [N$'$ [AdjP[Adj$'$[Adj[странная]]]][N[домашка]]]]]]
+        [T$'$ [T [$\emptyset$, name=T2]][VP[V$'$[V[смущает, name=T1]][NP[N$'$[N[студентов]]]]]]]
+    ]
+    \draw[->] (T1)
+    to[out=south west, in=south west](T2)
+\end{forest}\\
+Эта странная домашка смущает студентов.
+\\
+\begin{forest}
+    [TP
+        [NP [N$'$ [Pro [Мы]]]]
+        [T$'$ [T [будем]][VP[V$'$ [V$'$ [V[выбирать]][NP[N$'$[N[начинку]][PP[P$'$[P[для]][NP [N$'$ [N [торта]]]]]]]]][AdvP [Adv$'$ [Adv [вечером]]]]]]]]
+    ]
+\end{forest}\\
+Мы будем выбирать начинку для торта вечером.
+\\
+\begin{forest}
+[TP
+[DP [DP [D$'$ [D [This]][NP [N$'$ [N [scholars]]]]]] [D$'$ [D [-'s]][NP [N$'$ [AdjP [Adj$'$ [Adj [sweet]]]][N [daughter]]]]]]
+[T$'$ [T [is]][VP[V$'$[V[praising]][DP[D$'$[D[an]][NP[N$'$[N[island]]]]]]]]]
+]
+\end{forest}\\
+This scholar's sweet daughter is praising an island.\\
+\\
+\begin{forest}
+    [TP
+    [NP[N$'$[N[Linguists]]]]
+    [T$'$[T[$\emptyset$, name=t2]][VP[V$'$[V$'$[V[study, name=t1]][NP[N$'$[N[languages]]]]][DP[D$'$[D[every]][NP[N$'$[N[day]]]]]]]]]
+    ]
+    \draw[->] (t1)
+    to[out=south west, in=south west](t2)
+\end{forest}
+\\
+Linguists study languages every day.
+
+\end{document}
