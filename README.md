@@ -1,5 +1,5 @@
 # About me (general info)
-My name is Ekaterina Tkachenko (or just Katia). I am typesetting different things for different purposes, but the majority of them are focused on linguistics and linguistics olympiads. This repository represents my typesetting skills. 
+My name is Ekaterina Tkachenko (or just Katia). I typeset different things for different purposes, but the majority of them are focused on linguistics and linguistics olympiads. This repository represents my typesetting skills. 
 
 **!Attention!** If you want to tell about technical issues or mistakes -- send an email to ```t.kateri@yandex.ru```
 
