@@ -11,6 +11,7 @@ I usually typeset in ```LaTeX```, ```Overleaf``` and ```typst```. However, I hav
     - Some problems for [Oral Linguistics Olympiad](https://ling.hse.ru/junior/uol) (will be soon)
 2. ```Overleaf```
     - Homeworks on syntax (with syntactic trees, exactly)
+    - Homeworks on formal semantics (in progress)
 3. ```typst```
     - A paper containing linguistic problems on child speech
     - A hand-out on analysing the article and comparing its results with real linguistic problems
